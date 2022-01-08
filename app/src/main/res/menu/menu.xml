@@ -18,7 +18,7 @@
         android:id="@+id/currency"
         app:showAsAction="always"
         tools:ignore="MenuTitle"
-        android:icon="@drawable/ic_currency"
+        android:icon="@drawable/ic_exchange"
         />
     <item
         android:id="@+id/settings"

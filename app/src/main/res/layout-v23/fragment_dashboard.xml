@@ -41,7 +41,7 @@
         android:textAllCaps="false"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:drawableLeft="@drawable/ic_exchange"
+        android:drawableLeft="@drawable/ic_currency"
         android:drawableTint="@color/white"
         android:paddingRight="2dp"
         app:layout_constraintTop_toBottomOf="@id/chart_stats"
