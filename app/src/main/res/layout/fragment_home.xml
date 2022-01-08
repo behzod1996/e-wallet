@@ -1,6 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:chart="http://schemas.android.com/tools"
+    android:background="@color/blue_charcoal">
+
+    <include
+        android:id="@+id/layout_total"
+        layout="@layout/wallet_total_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_add"
+        android:layout_width="154dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="@dimen/dimen_20dp"
+        android:layout_marginTop="@dimen/dimen_34dp"
+        android:fontFamily="@font/raleway_medium"
+        android:text="@string/text_add"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:drawableLeft="@drawable/ic_add"
+        android:drawableTint="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/chart_stats"
+        app:layout_constraintStart_toStartOf="parent"
+         />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_currency"
+        android:layout_width="154dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="@dimen/dimen_34dp"
+        android:layout_marginEnd="@dimen/dimen_20dp"
+        android:fontFamily="@font/raleway_medium"
+        android:text="@string/text_exchange"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:drawableLeft="@drawable/ic_exchange"
+        android:drawableTint="@color/white"
+        android:paddingRight="2dp"
+        app:layout_constraintTop_toBottomOf="@id/chart_stats"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@id/btn_add"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <TextView
+        android:id="@+id/tv_stats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/raleway_medium"
+        android:text="@string/text_statistics_of_last_week"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.129"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_total" />
+
+    <com.db.williamchart.view.BarChartView
+        android:id="@+id/chart_stats"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginHorizontal="16dp"
+        android:paddingHorizontal="16dp"
+        app:chart_barsColor="@color/royal_blue"
+        app:chart_barsRadius="12dp"
+        app:chart_spacing="8dp"
+        app:chart_labelsColor="@color/white"
+        app:chart_labelsSize="10sp"
+        app:chart_axis="x"
+        app:chart_labelsFont="@font/raleway_medium"
+        android:layout_marginTop="@dimen/dimen_20dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_stats"
+        />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

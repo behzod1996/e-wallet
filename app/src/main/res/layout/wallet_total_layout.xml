@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    style="@style/TotalCardViewStyle"
+    android:backgroundTint="@color/daisy_bush"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="@string/text_total_balance"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/raleway_medium"
+            android:textColor="@color/teal_200"
+            />
+
+        <TextView
+            android:id="@+id/tv_total_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tv_total"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/text_total_value"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            />
+
+        <TextView
+            android:id="@+id/tv_income"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_total_value"
+            android:text="@string/text_income"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:textColor="@color/white"
+            android:paddingBottom="@dimen/dimen_2dp"
+            android:fontFamily="@font/raleway_medium"
+            android:layout_marginStart="@dimen/dimen_50dp"
+            android:textSize="15sp"
+            android:layout_marginTop="@dimen/dimen_15dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_income_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_12dp"
+            android:layout_marginTop="@dimen/dimen_15dp"
+            android:fontFamily="@font/raleway_medium"
+            android:text="@string/text_income_value"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/tv_income"
+            app:layout_constraintStart_toEndOf="@id/tv_income"
+            app:layout_constraintTop_toBottomOf="@id/tv_total_value"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/tv_expense"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tv_total_value"
+            app:layout_constraintStart_toEndOf="@id/tv_income_value"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="@string/text_expense"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:fontFamily="@font/raleway_medium"
+            android:layout_marginTop="@dimen/dimen_15dp"
+            android:layout_marginStart="@dimen/dimen_50dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_expense_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/tv_expense"
+            app:layout_constraintTop_toTopOf="@id/tv_expense"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/tv_expense"
+            android:text="@string/text_expense_value"
+            android:textColor="@color/white"
+            android:fontFamily="@font/raleway_medium"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
