@@ -7,4 +7,13 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="purple_heart">#5E29F2</color>
+    <color name="bittersweet">#F26464</color>
+    <color name="blue_gem">#331391</color>
+    <color name="shamrock">#55D9A3</color>
+    <color name="blue_charcoal">#000C1A</color>
+    <color name="blue_ribbon">#143CFF</color>
+    <color name="dark_blue_ribbon">#003CFF</color>
+    <color name="royal_blue">#3658FF</color>
+    <color name="daisy_bush">#4319BB</color>
 </resources>

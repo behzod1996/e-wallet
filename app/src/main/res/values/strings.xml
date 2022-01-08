@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">E-Wallet</string>
+    <string name="text_image">Image</string>
+    <string name="text_splash_title">The Most Trusted \nE-Wallet</string>
+    <string name="text_get_started">Get Started</string>
+    <string name="text_total_balance">Total balance</string>
+    <string name="text_total_value">$12000</string>
+    <string name="text_income">Income:</string>
+    <string name="text_expense">Expense</string>
+    <string name="text_expense_value">-100$</string>
+    <string name="text_income_value">+200 $</string>
+    <string name="text_add">Add</string>
+    <string name="text_exchange">Exchange</string>
+    <string name="text_statistics_of_last_week">Statistics of last week</string>
 </resources>
