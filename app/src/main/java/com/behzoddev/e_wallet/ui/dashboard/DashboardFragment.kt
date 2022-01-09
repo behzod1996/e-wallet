@@ -4,13 +4,18 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.NavController
+import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.NavigationUI
 import com.behzoddev.e_wallet.R
 import com.behzoddev.e_wallet.common.BaseFragment
 import com.behzoddev.e_wallet.databinding.FragmentDashboardBinding
 
 
 class DashboardFragment : BaseFragment<FragmentDashboardBinding>() {
+
+    private lateinit var navController: NavController
 
     override fun initializeBinding(
         inflater: LayoutInflater,
@@ -21,14 +26,21 @@ class DashboardFragment : BaseFragment<FragmentDashboardBinding>() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        initializeBottomNavigation()
         navigateToAdd()
         navigateToConverter()
     }
+
 
     private fun navigateToAdd() = with(binding) {
         btnAdd.setOnClickListener {
             findNavController().navigate(R.id.actionFromDashboardToAdd)
         }
+    }
+
+    private fun initializeBottomNavigation() = with(binding) {
+        navController = Navigation.findNavController(requireActivity(),R.id.nav_host)
+        NavigationUI.setupWithNavController(bottomNavigationView,navController)
     }
     private fun navigateToConverter() = with(binding) {
         btnCurrency.setOnClickListener {
