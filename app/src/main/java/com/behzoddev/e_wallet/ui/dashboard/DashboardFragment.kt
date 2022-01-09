@@ -22,11 +22,17 @@ class DashboardFragment : BaseFragment<FragmentDashboardBinding>() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         navigateToAdd()
+        navigateToConverter()
     }
 
     private fun navigateToAdd() = with(binding) {
         btnAdd.setOnClickListener {
             findNavController().navigate(R.id.actionFromDashboardToAdd)
+        }
+    }
+    private fun navigateToConverter() = with(binding) {
+        btnCurrency.setOnClickListener {
+            findNavController().navigate(R.id.actionFromDashboardToConverter)
         }
     }
 }
