@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
     <solid
-        android:color="@color/royal_blue"/>
-    <stroke
-        android:width="2dp"
-        android:color="@color/royal_blue" />
+        android:color="@color/daisy_bush"/>
     <corners
-        android:bottomRightRadius="10dp"
-        android:bottomLeftRadius="10dp"
+        android:bottomRightRadius="@dimen/dimen_50dp"
+        android:bottomLeftRadius="@dimen/dimen_50dp"
         />
     <padding android:left="0dp" android:top="0dp" android:right="0dp" android:bottom="0dp" />
 </shape>

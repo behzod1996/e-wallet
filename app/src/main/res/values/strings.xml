@@ -9,9 +9,17 @@
     <string name="text_expense">Expense:</string>
     <string name="text_expense_value">-100$</string>
     <string name="text_income_value">+200 $</string>
-    <string name="text_add">Add</string>
     <string name="text_exchange">Exchange</string>
     <string name="text_statistics_of_last_week">Statistics of last week</string>
     <string name="text_home">Home</string>
+    <string name="text_add_btn">Add</string>
     <string name="text_wallet">Wallet</string>
+    <string name="text_enter_a_title">Enter a title</string>
+    <string name="text_enter_an_amount">Enter an amount</string>
+    <string name="text_enter_a_type">Enter a type</string>
+    <string name="text_enter_a_tag">Enter a tag</string>
+    <string name="text_enter_a_date">Enter a date</string>
+    <string name="text_enter_a_description">Enter a description</string>
+    <string name="text_add_expense_income">Add expense/income</string>
+    <string name="text_add">Add expense/income</string>
 </resources>

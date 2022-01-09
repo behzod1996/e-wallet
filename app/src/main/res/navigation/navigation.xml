@@ -3,11 +3,29 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
-    app:startDestination="@id/dashboardFragment">
+    app:startDestination="@id/splashFragment">
 
     <fragment
         android:id="@+id/dashboardFragment"
         android:name="com.behzoddev.e_wallet.ui.dashboard.DashboardFragment"
         android:label="fragment_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_dashboard">
+        <action
+            android:id="@+id/actionFromDashboardToAdd"
+            app:destination="@id/addFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="com.behzoddev.e_wallet.ui.add.AddFragment"
+        android:label="fragment_add"
+        tools:layout="@layout/fragment_add" />
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.behzoddev.e_wallet.ui.splash.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/actionFromSplashToDashboard"
+            app:destination="@id/dashboardFragment" />
+    </fragment>
 </navigation>

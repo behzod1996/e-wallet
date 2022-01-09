@@ -3,8 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/user/AndroidStudioProjects/EWallet/app/src/main/res/drawable/bg_add_layout.xml" value="0.2574074074074074" />
         <entry key="..\:/Users/user/AndroidStudioProjects/EWallet/app/src/main/res/drawable/bg_total.xml" value="0.25462962962962965" />
         <entry key="..\:/Users/user/AndroidStudioProjects/EWallet/app/src/main/res/drawable/ic_add.xml" value="0.37135416666666665" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/EWallet/app/src/main/res/drawable/ic_back.xml" value="0.37135416666666665" />
         <entry key="..\:/Users/user/AndroidStudioProjects/EWallet/app/src/main/res/drawable/ic_currency.xml" value="0.2574074074074074" />
         <entry key="..\:/Users/user/AndroidStudioProjects/EWallet/app/src/main/res/drawable/ic_exchange.xml" value="0.37135416666666665" />
         <entry key="..\:/Users/user/AndroidStudioProjects/EWallet/app/src/main/res/drawable/ic_home.xml" value="0.2574074074074074" />
@@ -14,7 +16,7 @@
         <entry key="..\:/Users/user/AndroidStudioProjects/EWallet/app/src/main/res/layout-v23/fragment_home.xml" value="0.35520833333333335" />
         <entry key="..\:/Users/user/AndroidStudioProjects/EWallet/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/user/AndroidStudioProjects/EWallet/app/src/main/res/layout/activity_splash.xml" value="0.33" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/EWallet/app/src/main/res/layout/fragment_add.xml" value="0.2791666666666667" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/EWallet/app/src/main/res/layout/fragment_add.xml" value="0.33" />
         <entry key="..\:/Users/user/AndroidStudioProjects/EWallet/app/src/main/res/layout/fragment_converter.xml" value="0.2791666666666667" />
         <entry key="..\:/Users/user/AndroidStudioProjects/EWallet/app/src/main/res/layout/fragment_currencies_list.xml" value="0.2791666666666667" />
         <entry key="..\:/Users/user/AndroidStudioProjects/EWallet/app/src/main/res/layout/fragment_dashboard.xml" value="0.33" />
@@ -23,6 +25,7 @@
         <entry key="..\:/Users/user/AndroidStudioProjects/EWallet/app/src/main/res/layout/fragment_splash.xml" value="0.2074074074074074" />
         <entry key="..\:/Users/user/AndroidStudioProjects/EWallet/app/src/main/res/layout/fragment_stats.xml" value="0.2791666666666667" />
         <entry key="..\:/Users/user/AndroidStudioProjects/EWallet/app/src/main/res/layout/fragment_wallet.xml" value="0.2791666666666667" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/EWallet/app/src/main/res/layout/wallet_add_layout.xml" value="0.33" />
         <entry key="..\:/Users/user/AndroidStudioProjects/EWallet/app/src/main/res/layout/wallet_total_layout.xml" value="0.5" />
         <entry key="..\:/Users/user/AndroidStudioProjects/EWallet/app/src/main/res/menu/menu.xml" value="0.35520833333333335" />
       </map>

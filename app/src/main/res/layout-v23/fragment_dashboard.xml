@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:chart="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:chart="http://schemas.android.com/tools"
     android:background="@color/blue_charcoal">
 
     <include
@@ -19,16 +19,15 @@
         android:layout_height="57dp"
         android:layout_marginStart="@dimen/dimen_20dp"
         android:layout_marginTop="@dimen/dimen_34dp"
-        android:fontFamily="@font/raleway_medium"
-        android:text="@string/text_add"
-        android:textAllCaps="false"
-        android:textSize="18sp"
         android:drawableLeft="@drawable/ic_add"
         android:drawableTint="@color/white"
+        android:fontFamily="@font/raleway_medium"
+        android:text="@string/text_add_btn"
+        android:textAllCaps="false"
+        android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/chart_stats"
         app:layout_constraintStart_toStartOf="parent"
-         />
+        app:layout_constraintTop_toBottomOf="@id/chart_stats" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_currency"
@@ -36,18 +35,18 @@
         android:layout_height="57dp"
         android:layout_marginTop="@dimen/dimen_34dp"
         android:layout_marginEnd="@dimen/dimen_20dp"
+        android:drawableLeft="@drawable/ic_currency"
+        android:drawableTint="@color/white"
         android:fontFamily="@font/raleway_medium"
+        android:paddingRight="2dp"
         android:text="@string/text_exchange"
         android:textAllCaps="false"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:drawableLeft="@drawable/ic_currency"
-        android:drawableTint="@color/white"
-        android:paddingRight="2dp"
-        app:layout_constraintTop_toBottomOf="@id/chart_stats"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@id/btn_add"
+        app:layout_constraintTop_toBottomOf="@id/chart_stats"
         app:layout_constraintVertical_bias="0.0" />
 
 
@@ -71,17 +70,26 @@
         android:layout_width="match_parent"
         android:layout_height="120dp"
         android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="@dimen/dimen_20dp"
         android:paddingHorizontal="16dp"
+        app:chart_axis="x"
         app:chart_barsColor="@color/royal_blue"
         app:chart_barsRadius="12dp"
-        app:chart_spacing="8dp"
         app:chart_labelsColor="@color/white"
-        app:chart_labelsSize="10sp"
-        app:chart_axis="x"
         app:chart_labelsFont="@font/raleway_medium"
-        android:layout_marginTop="@dimen/dimen_20dp"
-        app:layout_constraintTop_toBottomOf="@id/tv_stats"
-        />
+        app:chart_labelsSize="10sp"
+        app:chart_spacing="8dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_stats" />
 
-
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="@color/blue_charcoal"
+        app:itemIconTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/menu" />
 </androidx.constraintlayout.widget.ConstraintLayout>
