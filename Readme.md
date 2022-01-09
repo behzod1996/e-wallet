@@ -1,4 +1,5 @@
 # E-Wallet
 
 ## Tech stacks
-*Kotlin
+- `Kotlin language`
+- `Coroutine`
