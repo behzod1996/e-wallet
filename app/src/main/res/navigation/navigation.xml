@@ -13,6 +13,9 @@
         <action
             android:id="@+id/actionFromDashboardToAdd"
             app:destination="@id/addFragment" />
+        <action
+            android:id="@+id/actionFromDashboardToConverter"
+            app:destination="@id/converterFragment" />
     </fragment>
     <fragment
         android:id="@+id/addFragment"
@@ -28,4 +31,9 @@
             android:id="@+id/actionFromSplashToDashboard"
             app:destination="@id/dashboardFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/converterFragment"
+        android:name="com.behzoddev.e_wallet.ui.converter.ConverterFragment"
+        android:label="fragment_converter"
+        tools:layout="@layout/fragment_converter" />
 </navigation>

@@ -22,4 +22,6 @@
     <string name="text_enter_a_description">Enter a description</string>
     <string name="text_add_expense_income">Add expense/income</string>
     <string name="text_add">Add expense/income</string>
+    <string name="text_exchange_converter">Exchange converter</string>
+    <string name="united_states_dollar">United States Dollar</string>
 </resources>
