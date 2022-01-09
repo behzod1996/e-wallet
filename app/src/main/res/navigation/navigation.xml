@@ -16,6 +16,9 @@
         <action
             android:id="@+id/actionFromDashboardToConverter"
             app:destination="@id/converterFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_walletFragment"
+            app:destination="@id/walletFragment" />
     </fragment>
     <fragment
         android:id="@+id/addFragment"
@@ -36,4 +39,13 @@
         android:name="com.behzoddev.e_wallet.ui.converter.ConverterFragment"
         android:label="fragment_converter"
         tools:layout="@layout/fragment_converter" />
+    <fragment
+        android:id="@+id/walletFragment"
+        android:name="com.behzoddev.e_wallet.ui.wallet.WalletFragment"
+        android:label="fragment_wallet"
+        tools:layout="@layout/fragment_wallet" >
+        <action
+            android:id="@+id/action_walletFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+    </fragment>
 </navigation>

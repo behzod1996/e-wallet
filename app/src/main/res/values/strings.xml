@@ -24,4 +24,5 @@
     <string name="text_add">Add expense/income</string>
     <string name="text_exchange_converter">Exchange converter</string>
     <string name="united_states_dollar">United States Dollar</string>
+    <string name="text_transactions">Transactions</string>
 </resources>

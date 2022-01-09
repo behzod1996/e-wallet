@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginLeft="@dimen/dimen_8dp"
+    android:layout_marginRight="@dimen/dimen_8dp"
+    android:layout_marginTop="@dimen/dimen_8dp"
+    android:layout_marginBottom="@dimen/dimen_8dp"
+    app:cardCornerRadius="@dimen/dimen_16dp"
+    app:cardElevation="@dimen/dimen_8dp"
+    app:cardBackgroundColor="@color/blue_gem"
+
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/item_constraint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+
+        <ImageView
+            android:id="@+id/item_icon"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            app:layout_constraintLeft_toLeftOf="@id/item_constraint"
+            app:layout_constraintBottom_toBottomOf="@id/item_constraint"
+            app:layout_constraintTop_toTopOf="@id/item_constraint"
+            android:layout_margin="@dimen/dimen_8dp"
+            android:padding="@dimen/dimen_8dp"
+            android:src="@drawable/ic_launcher_background"
+            android:contentDescription="@string/text_image"
+            />
+
+        <TextView
+            android:id="@+id/item_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_12dp"
+            android:layout_marginStart="@dimen/dimen_8dp"
+            android:fontFamily="@font/raleway_medium"
+            android:text="Item text"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/item_constraint"
+            app:layout_constraintLeft_toRightOf="@id/item_icon"
+            app:layout_constraintTop_toTopOf="@id/item_constraint"
+            app:layout_constraintVertical_bias="0.163" />
+
+        <TextView
+            android:id="@+id/item_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:layout_marginEnd="@dimen/dimen_8dp"
+            android:background="@drawable/ic_rectangle"
+            android:fontFamily="@font/raleway_medium"
+            android:paddingLeft="@dimen/dimen_4dp"
+            android:paddingTop="@dimen/dimen_2dp"
+            android:paddingRight="@dimen/dimen_4dp"
+            android:text="Item category"
+            android:textColor="@color/blue_gem"
+            android:textSize="12sp"
+            app:layout_constraintHorizontal_bias="0.044"
+            app:layout_constraintLeft_toRightOf="@id/item_icon"
+            app:layout_constraintRight_toRightOf="@id/item_constraint"
+            app:layout_constraintTop_toTopOf="@id/item_constraint"
+            tools:ignore="SmallSp" />
+
+        <TextView
+            android:id="@+id/item_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_14dp"
+            android:layout_marginEnd="@dimen/dimen_16dp"
+            android:layout_marginBottom="@dimen/dimen_20dp"
+            android:fontFamily="@font/raleway_medium"
+            android:text="Amount"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/item_constraint"
+            app:layout_constraintRight_toRightOf="@id/item_constraint"
+            app:layout_constraintTop_toTopOf="@id/item_constraint"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/item_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/raleway_medium"
+            android:text="Date"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="@id/item_constraint"
+            app:layout_constraintEnd_toEndOf="@id/item_constraint"
+            app:layout_constraintTop_toTopOf="@id/item_constraint"
+            app:layout_constraintVertical_bias="0.859"
+            tools:ignore="SmallSp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

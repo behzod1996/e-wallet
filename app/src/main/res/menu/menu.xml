@@ -3,19 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
     <item
-        android:id="@+id/home"
+        android:id="@+id/dashboardFragment"
         app:showAsAction="always"
         tools:ignore="MenuTitle"
         android:icon="@drawable/ic_home"/>
     <item
-        android:id="@+id/wallet"
+        android:id="@+id/walletFragment"
         app:showAsAction="always"
         tools:ignore="MenuTitle"
         android:icon="@drawable/ic_wallet"
         />
 
     <item
-        android:id="@+id/currency"
+        android:id="@+id/currencyFragment"
         app:showAsAction="always"
         tools:ignore="MenuTitle"
         android:icon="@drawable/ic_exchange"
