@@ -2,12 +2,13 @@ package com.behzoddev.e_wallet.data.repository
 
 import com.behzoddev.e_wallet.data.local.LocalDataSource
 import com.behzoddev.e_wallet.data.local.Transaction
-import com.behzoddev.e_wallet.di.BindModule
+import com.behzoddev.e_wallet.di.BindModule.DataSourceBinds
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
 class LocalRepositoryImpl @Inject constructor
-    (@BindModule.DataSourceBinds private val localDataSource: LocalDataSource): LocalRepository {
+    (@DataSourceBinds private val localDataSource: LocalDataSource): LocalRepository {
+
     override suspend fun insertTransaction(transaction: Transaction): Long {
         return localDataSource.insertTransaction(transaction)
     }
