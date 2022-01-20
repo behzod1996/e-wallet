@@ -5,6 +5,7 @@ import javax.inject.Inject
 
 class LocalDataSourceImpl @Inject constructor
     (private val transactionDao: TransactionDao) : LocalDataSource {
+
     override suspend fun insertTransaction(transaction: Transaction): Long {
         return transactionDao.insertTransaction(transaction)
     }
