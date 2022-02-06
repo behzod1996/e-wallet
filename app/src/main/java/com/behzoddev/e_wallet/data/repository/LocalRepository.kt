@@ -6,7 +6,7 @@ import kotlinx.coroutines.flow.Flow
 interface LocalRepository {
     suspend fun insertTransaction(transaction: Transaction): Long
     suspend fun updateTransaction(transaction: Transaction): Long
-    suspend fun deleteTransaction(transaction: Transaction): Long
+    suspend fun deleteTransaction(transaction: Transaction): Int
     fun getAllTransactions(): Flow<List<Transaction>>
     fun getById(transactionId: Int): Flow<Transaction>
 }

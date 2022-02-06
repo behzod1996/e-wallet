@@ -1,6 +1,6 @@
 package com.behzoddev.e_wallet.data.repository
 
-import com.behzoddev.e_wallet.data.local.LocalDataSource
+import com.behzoddev.e_wallet.data.datasource.LocalDataSource
 import com.behzoddev.e_wallet.data.local.Transaction
 import com.behzoddev.e_wallet.di.BindModule.DataSourceBinds
 import kotlinx.coroutines.flow.Flow
@@ -17,7 +17,7 @@ class LocalRepositoryImpl @Inject constructor
         return localDataSource.updateTransaction(transaction)
     }
 
-    override suspend fun deleteTransaction(transaction: Transaction): Long {
+    override suspend fun deleteTransaction(transaction: Transaction): Int {
         return localDataSource.deleteTransaction(transaction)
     }
 
