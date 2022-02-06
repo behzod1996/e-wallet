@@ -5,10 +5,10 @@ import com.behzoddev.e_wallet.data.repository.LocalRepository
 import com.behzoddev.e_wallet.di.BindModule.RepositoryBinds
 import javax.inject.Inject
 
-class DeleteTransaction @Inject constructor(
-    @RepositoryBinds private val repository: LocalRepository
+class UpdateTransactionUseCase @Inject constructor(
+   @RepositoryBinds private val repository: LocalRepository
 ) {
-    suspend fun deleteTransaction(transaction: Transaction): Long {
-        return repository.deleteTransaction(transaction)
+    suspend fun updateTransaction(transaction: Transaction): Long {
+        return repository.updateTransaction(transaction)
     }
 }

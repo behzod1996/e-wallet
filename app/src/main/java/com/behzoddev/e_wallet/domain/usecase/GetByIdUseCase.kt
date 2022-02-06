@@ -6,10 +6,10 @@ import com.behzoddev.e_wallet.di.BindModule.RepositoryBinds
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
-class GetAllTransactions @Inject constructor(
+class GetByIdUseCase @Inject constructor(
     @RepositoryBinds private val repository: LocalRepository
 ) {
-    fun getAllTransactions(): Flow<List<Transaction>> {
-        return repository.getAllTransactions()
+    fun getById(transactionId: Int): Flow<Transaction> {
+        return repository.getById(transactionId)
     }
 }
