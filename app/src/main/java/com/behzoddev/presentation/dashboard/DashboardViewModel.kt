@@ -3,8 +3,8 @@ package com.behzoddev.presentation.dashboard
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.behzoddev.e_wallet.data.local.Transaction
-import com.behzoddev.e_wallet.domain.usecase.DeleteTransaction
-import com.behzoddev.e_wallet.domain.usecase.GetAllTransactions
+import com.behzoddev.e_wallet.domain.usecase.DeleteTransactionUseCase
+import com.behzoddev.e_wallet.domain.usecase.GetAllTransactionsUseCase
 import com.behzoddev.e_wallet.utils.LocalState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Job
@@ -16,8 +16,8 @@ import javax.inject.Inject
 
 @HiltViewModel
 class DashboardViewModel @Inject constructor (
-    private val getAllTransactions: GetAllTransactions,
-    private val deleteTransaction: DeleteTransaction
+    private val getAllTransactions: GetAllTransactionsUseCase,
+    private val deleteTransaction: DeleteTransactionUseCase
         ) : ViewModel() {
 
     private var _dashboardState = MutableStateFlow<LocalState>(LocalState.Loading)
@@ -35,6 +35,7 @@ class DashboardViewModel @Inject constructor (
             }
         }
     }
+
     fun deleteTransaction(transaction: Transaction) : Job {
         return viewModelScope.launch {
             deleteTransaction.deleteTransaction(transaction)
