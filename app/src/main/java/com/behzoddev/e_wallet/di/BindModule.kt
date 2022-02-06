@@ -1,16 +1,18 @@
 package com.behzoddev.e_wallet.di
 
-import com.behzoddev.e_wallet.data.local.LocalDataSource
-import com.behzoddev.e_wallet.data.local.LocalDataSourceImpl
+import com.behzoddev.e_wallet.data.datasource.LocalDataSource
+import com.behzoddev.e_wallet.data.datasource.LocalDataSourceImpl
 import com.behzoddev.e_wallet.data.repository.LocalRepository
 import com.behzoddev.e_wallet.data.repository.LocalRepositoryImpl
 import dagger.Binds
 import dagger.Module
+import dagger.hilt.InstallIn
+import dagger.hilt.components.SingletonComponent
 import javax.inject.Qualifier
 import javax.inject.Singleton
 
 @Module
-@Singleton
+@InstallIn(SingletonComponent::class)
 abstract class BindModule {
 
     @Binds
