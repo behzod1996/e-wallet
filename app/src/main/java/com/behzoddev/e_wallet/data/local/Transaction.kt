@@ -20,7 +20,7 @@ data class Transaction(
     var transactionDesc: String,
     @ColumnInfo(name = RoomContract.Transaction.TRANSACTION_CREATE_DATE)
     var transactionCreateDate: Long = System.currentTimeMillis(),
-    @ColumnInfo(name = RoomContract.Transaction.TRANSACTION_TITLE)
+    @ColumnInfo(name = RoomContract.Transaction.TRANSACTION_ID)
     @PrimaryKey(autoGenerate = true)
     var transactionId: Int = 0
 )

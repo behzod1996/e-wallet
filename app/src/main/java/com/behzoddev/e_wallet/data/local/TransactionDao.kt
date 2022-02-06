@@ -13,12 +13,11 @@ interface TransactionDao {
     suspend fun updateTransaction(transaction: Transaction): Long
 
     @Delete
-    suspend fun deleteTransaction(transaction: Transaction): Long
+    suspend fun deleteTransaction(transaction: Transaction): Int
 
-    @Query("SELECT * FROM ${RoomContract.Database.DATABASE_TABLE_NAME} " +
-            "ORDER BY ${RoomContract.Transaction.TRANSACTION_CREATE_DATE}")
+    @Query("SELECT * FROM transaction_table ORDER BY transaction_create_date")
     fun getAllTransactions(): Flow<List<Transaction>>
 
-    @Query("SELECT * FROM ${RoomContract.Database.DATABASE_TABLE_NAME} WHERE ${RoomContract.Transaction.TRANSACTION_ID} =:productId")
+    @Query("SELECT * FROM transaction_table WHERE transaction_id =:productId")
     fun getById(productId: Int): Flow<Transaction>
 }
