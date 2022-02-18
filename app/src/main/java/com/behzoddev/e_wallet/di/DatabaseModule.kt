@@ -1,7 +1,6 @@
 package com.behzoddev.e_wallet.di
 
 import android.app.Application
-import com.behzoddev.e_wallet.data.local.Transaction
 import com.behzoddev.e_wallet.data.local.TransactionDao
 import com.behzoddev.e_wallet.data.local.TransactionDatabase
 import dagger.Module
