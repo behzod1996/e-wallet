@@ -1,4 +1,4 @@
-package com.behzoddev.e_wallet.common
+package com.behzoddev.e_wallet.common.base
 
 import android.os.Bundle
 import android.view.LayoutInflater
