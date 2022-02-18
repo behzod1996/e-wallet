@@ -9,7 +9,7 @@ interface TransactionDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertTransaction(transactionModel: TransactionModel): Long
 
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    @Update(onConflict = OnConflictStrategy.REPLACE)
     suspend fun updateTransaction(transactionModel: TransactionModel): Int
 
     @Delete
