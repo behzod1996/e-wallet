@@ -5,7 +5,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity(tableName = RoomContract.Transaction.TRANSACTION_TABLE_NAME)
-data class Transaction(
+data class TransactionModel(
     @ColumnInfo(name = RoomContract.Transaction.TRANSACTION_TITLE)
     var transactionTitle: String,
     @ColumnInfo(name = RoomContract.Transaction.TRANSACTION_AMOUNT)
