@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.behzoddev.e_wallet.common.BaseFragment
+import com.behzoddev.e_wallet.common.base.BaseFragment
 import com.behzoddev.e_wallet.databinding.FragmentConverterBinding
 
 class ConverterFragment : BaseFragment<FragmentConverterBinding>() {

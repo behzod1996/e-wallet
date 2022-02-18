@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.behzoddev.e_wallet.R
-import com.behzoddev.e_wallet.common.BaseFragment
+import com.behzoddev.e_wallet.common.base.BaseFragment
 import com.behzoddev.e_wallet.databinding.FragmentSplashBinding
 
 class SplashFragment : BaseFragment<FragmentSplashBinding>() {

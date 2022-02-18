@@ -9,7 +9,7 @@ import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.behzoddev.e_wallet.R
-import com.behzoddev.e_wallet.common.BaseFragment
+import com.behzoddev.e_wallet.common.base.BaseFragment
 import com.behzoddev.e_wallet.databinding.FragmentDashboardBinding
 
 
