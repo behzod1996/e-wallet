@@ -1,4 +1,4 @@
-package com.behzoddev.presentation.dashboard
+package com.behzoddev.presentation.wallet
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -15,7 +15,7 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class DashboardViewModel @Inject constructor (
+class WalletViewModel @Inject constructor (
     private val getAllTransactions: FetchAllTransactionsInteractor,
     private val deleteTransaction: DeleteTransactionInteractor
         ) : ViewModel() {
