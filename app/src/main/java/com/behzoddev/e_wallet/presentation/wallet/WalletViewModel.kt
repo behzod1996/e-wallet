@@ -5,7 +5,6 @@ import androidx.lifecycle.viewModelScope
 import com.behzoddev.e_wallet.data.local.TransactionModel
 import com.behzoddev.e_wallet.domain.interactor.DeleteTransactionInteractor
 import com.behzoddev.e_wallet.domain.interactor.FetchAllTransactionsInteractor
-import com.behzoddev.e_wallet.utils.LocalState
 import com.behzoddev.e_wallet.utils.states.TransactionViewState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Job
