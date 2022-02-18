@@ -27,12 +27,12 @@ class DashboardFragment : BaseFragment<FragmentDashboardBinding>() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initializeBottomNavigation()
-        navigateToAdd()
-        navigateToConverter()
+        onNavigateToAdd()
+        onNavigateToConverter()
     }
 
 
-    private fun navigateToAdd() = with(binding) {
+    private fun onNavigateToAdd() = with(binding) {
         btnAdd.setOnClickListener {
             findNavController().navigate(R.id.actionFromDashboardToAdd)
         }
@@ -42,7 +42,7 @@ class DashboardFragment : BaseFragment<FragmentDashboardBinding>() {
         navController = Navigation.findNavController(requireActivity(),R.id.nav_host)
         NavigationUI.setupWithNavController(bottomNavigationView,navController)
     }
-    private fun navigateToConverter() = with(binding) {
+    private fun onNavigateToConverter() = with(binding) {
         btnCurrency.setOnClickListener {
             findNavController().navigate(R.id.actionFromDashboardToConverter)
         }
