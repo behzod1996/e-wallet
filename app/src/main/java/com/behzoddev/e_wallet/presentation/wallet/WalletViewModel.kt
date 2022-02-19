@@ -18,7 +18,7 @@ import javax.inject.Inject
 class WalletViewModel @Inject constructor (
     private val getAllTransactions: FetchAllTransactionsInteractor,
     private val deleteTransaction: DeleteTransactionInteractor
-        ) : ViewModel() {
+ ) : ViewModel() {
 
     private var _dashboardState = MutableStateFlow<TransactionViewState>(TransactionViewState.Loading)
     val dashboardState : StateFlow<TransactionViewState> = _dashboardState
