@@ -12,10 +12,11 @@ import com.behzoddev.e_wallet.databinding.ItemTransactionBinding
 
 class WalletAdapter : RecyclerView.Adapter<WalletAdapter.WalletViewHolder>() {
 
-    inner class WalletViewHolder(val binding : ItemTransactionBinding) : RecyclerView.ViewHolder(binding.root)
+    inner class WalletViewHolder(val binding: ItemTransactionBinding) :
+        RecyclerView.ViewHolder(binding.root)
 
     companion object {
-        private val diffUtil = object: DiffUtil.ItemCallback<TransactionModel>() {
+        private val diffUtil = object : DiffUtil.ItemCallback<TransactionModel>() {
             override fun areItemsTheSame(
                 oldItem: TransactionModel,
                 newItem: TransactionModel
@@ -38,7 +39,8 @@ class WalletAdapter : RecyclerView.Adapter<WalletAdapter.WalletViewHolder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): WalletViewHolder {
-        val binding = ItemTransactionBinding.inflate(LayoutInflater.from(parent.context),parent,false)
+        val binding =
+            ItemTransactionBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return WalletViewHolder(binding)
     }
 
@@ -49,7 +51,7 @@ class WalletAdapter : RecyclerView.Adapter<WalletAdapter.WalletViewHolder>() {
             itemCategory.text = item.transactionType
             itemDate.text = item.transactionDate
 
-            when(item.transactionType) {
+            when (item.transactionType) {
                 "Income" -> {
                     itemAmount.text = "+".plus(convertToString(item.transactionAmount))
                 }
@@ -57,7 +59,7 @@ class WalletAdapter : RecyclerView.Adapter<WalletAdapter.WalletViewHolder>() {
                     itemAmount.text = "-".plus(convertToString(item.transactionAmount))
                 }
             }
-            when(item.transactionTag) {
+            when (item.transactionTag) {
                 "Housing" -> {
                     itemIcon.setImageResource(R.drawable.ic_housing)
                 }
