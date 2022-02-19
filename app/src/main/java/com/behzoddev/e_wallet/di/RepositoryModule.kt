@@ -16,5 +16,5 @@ abstract class RepositoryModule {
     @Singleton
     abstract fun providesRepositoryInstance(
         transactionRepositoryImpl: TransactionRepositoryImpl
-    ) : TransactionRepository
+    ): TransactionRepository
 }

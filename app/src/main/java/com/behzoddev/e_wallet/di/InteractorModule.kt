@@ -21,17 +21,17 @@ abstract class InteractorModule {
     @Singleton
     internal abstract fun providesFetchAllTransactionInteractor(
         fetchAllTransactionsInteractorImpl: FetchAllTransactionsInteractorImpl
-    ) : FetchAllTransactionsInteractor
+    ): FetchAllTransactionsInteractor
 
     @Binds
     @Singleton
     internal abstract fun providesUpdateTransactionInteractor(
         updateInteractor: UpdateTransactionInteractorImpl
-    ) : UpdateTransactionInteractor
+    ): UpdateTransactionInteractor
 
     @Binds
     @Singleton
     internal abstract fun providesDeleteTransactionInteractor(
         deleteTransactionInteractorImpl: DeleteTransactionInteractorImpl
-    ) : DeleteTransactionInteractor
+    ): DeleteTransactionInteractor
 }

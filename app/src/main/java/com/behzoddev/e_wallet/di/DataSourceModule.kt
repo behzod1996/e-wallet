@@ -16,5 +16,5 @@ abstract class DataSourceModule {
     @Singleton
     internal abstract fun provideTransactionDataSourceInstance(
         transactionDataSource: TransactionDataSourceImpl
-    ) : TransactionDataSource
+    ): TransactionDataSource
 }
