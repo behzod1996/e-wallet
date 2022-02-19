@@ -1,9 +1,6 @@
 package com.behzoddev.e_wallet.di
 
-import com.behzoddev.e_wallet.domain.interactor.FetchAllTransactionsInteractor
-import com.behzoddev.e_wallet.domain.interactor.FetchAllTransactionsInteractorImpl
-import com.behzoddev.e_wallet.domain.interactor.InsertTransactionInteractor
-import com.behzoddev.e_wallet.domain.interactor.InsertTransactionInteractorImpl
+import com.behzoddev.e_wallet.domain.interactor.*
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
@@ -25,4 +22,16 @@ abstract class InteractorModule {
     internal abstract fun providesFetchAllTransactionInteractor(
         fetchAllTransactionsInteractorImpl: FetchAllTransactionsInteractorImpl
     ) : FetchAllTransactionsInteractor
+
+    @Binds
+    @Singleton
+    internal abstract fun providesUpdateTransactionInteractor(
+        updateInteractor: UpdateTransactionInteractorImpl
+    ) : UpdateTransactionInteractor
+
+    @Binds
+    @Singleton
+    internal abstract fun providesDeleteTransactionInteractor(
+        deleteTransactionInteractorImpl: DeleteTransactionInteractorImpl
+    ) : DeleteTransactionInteractor
 }
