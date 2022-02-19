@@ -31,6 +31,7 @@ class WalletFragment : BaseFragment<FragmentWalletBinding>() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initializeRecyclerView()
+        observerWallet()
     }
 
     private fun initializeRecyclerView() = with(binding) {
@@ -39,7 +40,7 @@ class WalletFragment : BaseFragment<FragmentWalletBinding>() {
         recyclerView.adapter = walletAdapter
     }
     private fun observerWallet() = lifecycleScope.launchWhenCreated {
-        walletViewModel.dashboardState.collect {
+        walletViewModel.walletState.collect {
             when(it) {
                 is TransactionViewState.Loading -> {}
                 is TransactionViewState.Success -> {
@@ -47,6 +48,9 @@ class WalletFragment : BaseFragment<FragmentWalletBinding>() {
                 }
                 is TransactionViewState.Error -> {
                     toastShort("Cannot load data")
+                }
+                is TransactionViewState.Empty -> {
+
                 }
             }
         }

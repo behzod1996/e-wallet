@@ -11,6 +11,7 @@ import androidx.navigation.fragment.findNavController
 import com.behzoddev.e_wallet.R
 import com.behzoddev.e_wallet.common.base.BaseFragment
 import com.behzoddev.e_wallet.common.extensions.setDatePicker
+import com.behzoddev.e_wallet.common.extensions.toastShort
 import com.behzoddev.e_wallet.data.local.TransactionModel
 import com.behzoddev.e_wallet.databinding.FragmentAddBinding
 import com.behzoddev.e_wallet.presentation.add.AddViewModel
@@ -43,6 +44,7 @@ class AddFragment : BaseFragment<FragmentAddBinding>() {
         with(binding) {
             btnSave.setOnClickListener{
                 addViewModel.insertTransaction(fetchTransactions()).run {
+                    toastShort("Successfully saved data")
                     findNavController().navigate(R.id.actionAddFragmentToDashboardFragment)
                 }
             }
