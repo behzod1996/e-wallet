@@ -11,8 +11,10 @@ import androidx.navigation.ui.NavigationUI
 import com.behzoddev.e_wallet.R
 import com.behzoddev.e_wallet.common.base.BaseFragment
 import com.behzoddev.e_wallet.databinding.FragmentDashboardBinding
+import dagger.hilt.android.AndroidEntryPoint
 
 
+@AndroidEntryPoint
 class DashboardFragment : BaseFragment<FragmentDashboardBinding>() {
 
     private lateinit var navController: NavController
