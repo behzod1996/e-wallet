@@ -24,7 +24,11 @@
         android:id="@+id/addFragment"
         android:name="com.behzoddev.e_wallet.ui.add.AddFragment"
         android:label="fragment_add"
-        tools:layout="@layout/fragment_add" />
+        tools:layout="@layout/fragment_add" >
+        <action
+            android:id="@+id/actionAddFragmentToDashboardFragment"
+            app:destination="@id/dashboardFragment" />
+    </fragment>
     <fragment
         android:id="@+id/splashFragment"
         android:name="com.behzoddev.e_wallet.ui.splash.SplashFragment"
