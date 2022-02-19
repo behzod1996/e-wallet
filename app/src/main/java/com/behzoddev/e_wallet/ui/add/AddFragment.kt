@@ -5,15 +5,24 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import androidx.fragment.app.activityViewModels
+import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.behzoddev.e_wallet.R
 import com.behzoddev.e_wallet.common.base.BaseFragment
 import com.behzoddev.e_wallet.common.extensions.setDatePicker
+import com.behzoddev.e_wallet.data.local.TransactionModel
 import com.behzoddev.e_wallet.databinding.FragmentAddBinding
+import com.behzoddev.e_wallet.presentation.add.AddViewModel
 import com.behzoddev.e_wallet.utils.constants.TransactionTags
 import com.behzoddev.e_wallet.utils.constants.TransactionType
+import dagger.hilt.android.AndroidEntryPoint
 import java.util.*
 
+@AndroidEntryPoint
 class AddFragment : BaseFragment<FragmentAddBinding>() {
+
+    private val addViewModel: AddViewModel by activityViewModels()
 
     override fun initializeBinding(
         inflater: LayoutInflater,
@@ -27,9 +36,18 @@ class AddFragment : BaseFragment<FragmentAddBinding>() {
         initializeTag()
         initializeType()
         initializeDatePicker()
+        insertTransaction()
     }
 
-
+    private fun insertTransaction() {
+        with(binding) {
+            btnSave.setOnClickListener{
+                addViewModel.insertTransaction(fetchTransactions()).run {
+                    findNavController().navigate(R.id.actionAddFragmentToDashboardFragment)
+                }
+            }
+        }
+    }
     private fun initializeTag() = with(binding) {
         val transactionTag = ArrayAdapter(
             requireContext(),
@@ -54,5 +72,16 @@ class AddFragment : BaseFragment<FragmentAddBinding>() {
             "dd/MM/E",
             Date()
         )
+    }
+
+    private fun fetchTransactions(): TransactionModel = binding.layoutAdd.let {
+        val transactionTitle = it.tieTitle.text.toString()
+        val transactionAmount = it.tieAmount.text.toString()
+        val transactionType = it.actType.text.toString()
+        val transactionTag= it.actTag.text.toString()
+        val transactionDate = it.tieDate.text.toString()
+        val transactionDesc = it.tieDesc.text.toString()
+
+        return@fetchTransactions TransactionModel(transactionTitle,transactionAmount.toDouble(),transactionType,transactionTag,transactionDate,transactionDesc)
     }
 }
