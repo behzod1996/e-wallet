@@ -29,7 +29,7 @@ class AddFragment : BaseFragment<FragmentAddBinding>() {
         inflater: LayoutInflater,
         container: ViewGroup?
     ): FragmentAddBinding {
-        return FragmentAddBinding.inflate(inflater,container,false)
+        return FragmentAddBinding.inflate(inflater, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -42,7 +42,7 @@ class AddFragment : BaseFragment<FragmentAddBinding>() {
 
     private fun insertTransaction() {
         with(binding) {
-            btnSave.setOnClickListener{
+            btnSave.setOnClickListener {
                 addViewModel.insertTransaction(fetchTransactions()).run {
                     toastShort("Successfully saved data")
                     findNavController().navigate(R.id.actionAddFragmentToDashboardFragment)
@@ -50,6 +50,7 @@ class AddFragment : BaseFragment<FragmentAddBinding>() {
             }
         }
     }
+
     private fun initializeTag() = with(binding) {
         val transactionTag = ArrayAdapter(
             requireContext(),
@@ -80,10 +81,17 @@ class AddFragment : BaseFragment<FragmentAddBinding>() {
         val transactionTitle = it.tieTitle.text.toString()
         val transactionAmount = it.tieAmount.text.toString()
         val transactionType = it.actType.text.toString()
-        val transactionTag= it.actTag.text.toString()
+        val transactionTag = it.actTag.text.toString()
         val transactionDate = it.tieDate.text.toString()
         val transactionDesc = it.tieDesc.text.toString()
 
-        return@fetchTransactions TransactionModel(transactionTitle,transactionAmount.toDouble(),transactionType,transactionTag,transactionDate,transactionDesc)
+        return@fetchTransactions TransactionModel(
+            transactionTitle,
+            transactionAmount.toDouble(),
+            transactionType,
+            transactionTag,
+            transactionDate,
+            transactionDesc
+        )
     }
 }

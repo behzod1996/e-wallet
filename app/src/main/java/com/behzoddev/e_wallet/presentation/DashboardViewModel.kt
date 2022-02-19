@@ -16,8 +16,9 @@ class DashboardViewModel @Inject constructor(
     private val fetchAllTransactionsInteractor: FetchAllTransactionsInteractor
 ) : ViewModel() {
 
-    private var _dashboardState = MutableStateFlow<TransactionViewState>(TransactionViewState.Loading)
-    val dashboardState : StateFlow<TransactionViewState> = _dashboardState
+    private var _dashboardState =
+        MutableStateFlow<TransactionViewState>(TransactionViewState.Loading)
+    val dashboardState: StateFlow<TransactionViewState> = _dashboardState
 
     init {
         viewModelScope.launch {

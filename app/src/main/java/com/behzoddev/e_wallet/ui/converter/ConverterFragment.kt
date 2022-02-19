@@ -13,7 +13,7 @@ class ConverterFragment : BaseFragment<FragmentConverterBinding>() {
         inflater: LayoutInflater,
         container: ViewGroup?
     ): FragmentConverterBinding {
-        return FragmentConverterBinding.inflate(inflater,container,false)
+        return FragmentConverterBinding.inflate(inflater, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

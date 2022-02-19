@@ -16,12 +16,13 @@ import javax.inject.Inject
 class AddViewModel @Inject constructor(
     private val insertTransaction: InsertTransactionInteractor,
     private val updateTransaction: UpdateTransactionInteractor
-)  : ViewModel() {
+) : ViewModel() {
 
     fun insertTransaction(transactionModel: TransactionModel) = viewModelScope.launch {
         insertTransaction.invoke(transactionModel)
         debug { "insertTransaction() method is created" }
     }
+
     fun updateTransaction(transactionModel: TransactionModel) = viewModelScope.launch {
         updateTransaction.invoke(transactionModel)
     }

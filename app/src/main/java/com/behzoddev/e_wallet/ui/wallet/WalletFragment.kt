@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
+import com.behzoddev.e_wallet.R
 import com.behzoddev.e_wallet.common.base.BaseFragment
 import com.behzoddev.e_wallet.common.extensions.toastShort
 import com.behzoddev.e_wallet.data.local.TransactionModel
@@ -39,6 +41,7 @@ class WalletFragment : BaseFragment<FragmentWalletBinding>() {
         val recyclerView = transactionRecyclerView
         recyclerView.adapter = walletAdapter
     }
+
     private fun observerWallet() = lifecycleScope.launchWhenCreated {
         walletViewModel.walletState.collect {
             when(it) {
@@ -53,6 +56,13 @@ class WalletFragment : BaseFragment<FragmentWalletBinding>() {
 
                 }
             }
+        }
+    }
+
+    private fun onNavigateBack() = with(binding) {
+        toolbarWallet.btnBack.isClickable = true
+        toolbarWallet.btnBack.setOnClickListener {
+            findNavController().navigate(R.id.actionWalletFragmentToDashboardFragment)
         }
     }
     private fun getAllTransactions(list: List<TransactionModel>) = walletAdapter.differ.submitList(list)
