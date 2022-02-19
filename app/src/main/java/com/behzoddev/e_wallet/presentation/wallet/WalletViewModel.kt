@@ -15,13 +15,13 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class WalletViewModel @Inject constructor (
+class WalletViewModel @Inject constructor(
     private val getAllTransactions: FetchAllTransactionsInteractor,
     private val deleteTransaction: DeleteTransactionInteractor
- ) : ViewModel() {
+) : ViewModel() {
 
     private var _walletState = MutableStateFlow<TransactionViewState>(TransactionViewState.Loading)
-    val walletState : StateFlow<TransactionViewState> = _walletState
+    val walletState: StateFlow<TransactionViewState> = _walletState
 
     init {
         viewModelScope.launch {
@@ -35,7 +35,7 @@ class WalletViewModel @Inject constructor (
         }
     }
 
-    fun deleteTransaction(transactionModel: TransactionModel) : Job {
+    fun deleteTransaction(transactionModel: TransactionModel): Job {
         return viewModelScope.launch {
             deleteTransaction.invoke(transactionModel)
         }
