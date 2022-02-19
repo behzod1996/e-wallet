@@ -4,6 +4,7 @@ object RoomContract {
     object Database {
         const val DATABASE_TABLE_NAME = "transaction_database"
     }
+
     object Transaction {
         const val TRANSACTION_TABLE_NAME = "transaction_table"
         const val TRANSACTION_TITLE = "transaction_title"
