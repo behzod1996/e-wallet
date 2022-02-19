@@ -10,6 +10,7 @@ class DeleteTransactionInteractorImpl @Inject constructor(
     private val transactionRepository: TransactionRepository,
     private val dispatcherProvider: DispatcherProvider
 ) : DeleteTransactionInteractor {
+
     override suspend fun invoke(transactionModel: TransactionModel): Int {
         return withContext(dispatcherProvider.io) {
             transactionRepository.deleteTransaction(transactionModel)

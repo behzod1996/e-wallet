@@ -10,6 +10,7 @@ class InsertTransactionInteractorImpl @Inject constructor(
     private val transactionRepository: TransactionRepository,
     private val dispatcherProvider: DispatcherProvider
 ) : InsertTransactionInteractor {
+
     override suspend fun invoke(transactionModel: TransactionModel): Long {
         return withContext(dispatcherProvider.io) {
             transactionRepository.insertTransaction(transactionModel)
