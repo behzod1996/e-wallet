@@ -6,7 +6,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 
 fun Activity.toastLong(message: String) {
-    Toast.makeText(this,message,Toast.LENGTH_LONG).show()
+    Toast.makeText(this, message, Toast.LENGTH_LONG).show()
 }
 
 fun Activity.toastShort(message: String) {
@@ -14,11 +14,11 @@ fun Activity.toastShort(message: String) {
 }
 
 fun Fragment.toastLong(message: String) {
-    Toast.makeText(activity,message,Toast.LENGTH_LONG).show()
+    Toast.makeText(activity, message, Toast.LENGTH_LONG).show()
 }
 
 fun Fragment.toastShort(message: String) {
-    Toast.makeText(activity,message,Toast.LENGTH_SHORT).show()
+    Toast.makeText(activity, message, Toast.LENGTH_SHORT).show()
 }
 
 fun View.hide() {
