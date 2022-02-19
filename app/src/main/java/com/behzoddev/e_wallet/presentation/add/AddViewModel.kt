@@ -4,6 +4,7 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.behzoddev.e_wallet.common.extensions.debug
 import com.behzoddev.e_wallet.data.local.TransactionModel
 import com.behzoddev.e_wallet.domain.interactor.InsertTransactionInteractor
 import com.behzoddev.e_wallet.domain.interactor.UpdateTransactionInteractor
@@ -19,6 +20,7 @@ class AddViewModel @Inject constructor(
 
     fun insertTransaction(transactionModel: TransactionModel) = viewModelScope.launch {
         insertTransaction.invoke(transactionModel)
+        debug { "insertTransaction() method is created" }
     }
     fun updateTransaction(transactionModel: TransactionModel) = viewModelScope.launch {
         updateTransaction.invoke(transactionModel)

@@ -20,16 +20,16 @@ class WalletViewModel @Inject constructor (
     private val deleteTransaction: DeleteTransactionInteractor
  ) : ViewModel() {
 
-    private var _dashboardState = MutableStateFlow<TransactionViewState>(TransactionViewState.Loading)
-    val dashboardState : StateFlow<TransactionViewState> = _dashboardState
+    private var _walletState = MutableStateFlow<TransactionViewState>(TransactionViewState.Loading)
+    val walletState : StateFlow<TransactionViewState> = _walletState
 
     init {
         viewModelScope.launch {
             getAllTransactions.invoke().collect { result ->
                 if (result.isNullOrEmpty()) {
-                    _dashboardState.value = TransactionViewState.Empty
+                    _walletState.value = TransactionViewState.Empty
                 } else {
-                    _dashboardState.value = TransactionViewState.Success(result)
+                    _walletState.value = TransactionViewState.Success(result)
                 }
             }
         }
