@@ -9,7 +9,7 @@ data class TransactionModel(
     @ColumnInfo(name = RoomContract.Transaction.TRANSACTION_TITLE)
     var transactionTitle: String,
     @ColumnInfo(name = RoomContract.Transaction.TRANSACTION_AMOUNT)
-    var transactionAmount: String,
+    var transactionAmount: Double,
     @ColumnInfo(name = RoomContract.Transaction.TRANSACTION_TYPE)
     var transactionType: String,
     @ColumnInfo(name = RoomContract.Transaction.TRANSACTION_TAG)
