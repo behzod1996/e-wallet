@@ -26,7 +26,7 @@ class WalletApplication : Application() {
 
         Timber.plant(object : Timber.DebugTree() {
             override fun log(priority: Int, tag: String?, message: String, t: Throwable?) {
-                Logger.log(priority,"-$tag",message,t)
+                Logger.log(priority, "-$tag", message, t)
             }
         })
         debug { "onCreate() is created" }
