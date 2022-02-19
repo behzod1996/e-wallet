@@ -35,7 +35,7 @@ class DashboardFragment : BaseFragment<FragmentDashboardBinding>() {
         inflater: LayoutInflater,
         container: ViewGroup?
     ): FragmentDashboardBinding {
-        return FragmentDashboardBinding.inflate(inflater,container,false)
+        return FragmentDashboardBinding.inflate(inflater, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -55,7 +55,7 @@ class DashboardFragment : BaseFragment<FragmentDashboardBinding>() {
 
     private fun observerDashboard() = lifecycleScope.launchWhenCreated {
         dashboardViewModel.dashboardState.collect { result ->
-            when(result) {
+            when (result) {
                 is TransactionViewState.Loading -> {}
                 is TransactionViewState.Success -> {
                     fetchAllTransactions(result.data)
@@ -70,6 +70,7 @@ class DashboardFragment : BaseFragment<FragmentDashboardBinding>() {
             }
         }
     }
+
     private fun onNavigateToAdd() = with(binding) {
         btnAdd.setOnClickListener {
             findNavController().navigate(R.id.actionFromDashboardToAdd)
@@ -78,23 +79,27 @@ class DashboardFragment : BaseFragment<FragmentDashboardBinding>() {
     }
 
     private fun initializeBottomNavigation() = with(binding) {
-        navController = Navigation.findNavController(requireActivity(),R.id.nav_host)
-        NavigationUI.setupWithNavController(bottomNavigationView,navController)
+        navController = Navigation.findNavController(requireActivity(), R.id.nav_host)
+        NavigationUI.setupWithNavController(bottomNavigationView, navController)
         debug { "Bottom Navigation is initialized" }
     }
+
     private fun onNavigateToConverter() = with(binding) {
         btnCurrency.setOnClickListener {
             findNavController().navigate(R.id.actionFromDashboardToConverter)
             debug { "onNavigateConverter() method is navigated to ConverterFragment" }
         }
     }
+
     private fun fetchTotalTransactions(list: List<TransactionModel>) = with(binding) {
-        val (totalIncome,totalExpense) = list.partition { it.transactionType == "Income" }
+        val (totalIncome, totalExpense) = list.partition { it.transactionType == "Income" }
         val income = totalIncome.sumOf { it.transactionAmount }
         val expense = totalExpense.sumOf { it.transactionAmount }
         layoutTotal.tvIncomeValue.text = "+".plus(convertToString(income))
         layoutTotal.tvExpenseValue.text = "-".plus(convertToString(expense))
-        layoutTotal.tvTotalValue.text = convertToString(income-expense)
+        layoutTotal.tvTotalValue.text = convertToString(income - expense)
     }
-    private fun fetchAllTransactions(list: List<TransactionModel>) = dashboardAdapter.differ.submitList(list)
+
+    private fun fetchAllTransactions(list: List<TransactionModel>) =
+        dashboardAdapter.differ.submitList(list)
 }

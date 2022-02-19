@@ -15,7 +15,7 @@ class SplashFragment : BaseFragment<FragmentSplashBinding>() {
         inflater: LayoutInflater,
         container: ViewGroup?
     ): FragmentSplashBinding {
-        return FragmentSplashBinding.inflate(inflater,container,false)
+        return FragmentSplashBinding.inflate(inflater, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
