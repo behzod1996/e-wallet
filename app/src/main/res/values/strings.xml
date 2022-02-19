@@ -25,4 +25,5 @@
     <string name="text_exchange_converter">Exchange converter</string>
     <string name="united_states_dollar">United States Dollar</string>
     <string name="text_transactions">Transactions</string>
+    <string name="text_recent_transactions">Recent transactions</string>
 </resources>

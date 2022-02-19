@@ -15,7 +15,7 @@
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="600dp"
         app:layout_constraintTop_toBottomOf="@id/toolbar_wallet"
         >
         <androidx.core.widget.NestedScrollView
@@ -27,10 +27,10 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/transaction_recycler_view"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginTop="@dimen/dimen_16dp"
+                tools:itemCount="10"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                app:layout_constraintTop_toBottomOf="@id/toolbar_wallet"
                 tools:listitem="@layout/item_transaction"
                 />
         </androidx.core.widget.NestedScrollView>

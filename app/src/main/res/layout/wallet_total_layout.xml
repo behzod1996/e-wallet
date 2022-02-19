@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     style="@style/TotalCardViewStyle"
-    android:backgroundTint="@color/daisy_bush"
-    >
+    android:backgroundTint="@color/daisy_bush">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -33,7 +33,7 @@
             app:layout_constraintTop_toBottomOf="@id/tv_total"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:text="@string/text_total_value"
+            tools:text="@string/text_total_value"
             android:textSize="30sp"
             android:textStyle="bold"
             android:textColor="@color/white"
@@ -62,7 +62,7 @@
             android:layout_marginStart="@dimen/dimen_12dp"
             android:layout_marginTop="@dimen/dimen_15dp"
             android:fontFamily="@font/raleway_medium"
-            android:text="@string/text_income_value"
+            tools:text="@string/text_income_value"
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -92,7 +92,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/raleway_medium"
-            android:text="@string/text_expense_value"
+            tools:text="@string/text_expense_value"
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold"

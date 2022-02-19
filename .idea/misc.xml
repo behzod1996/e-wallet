@@ -20,19 +20,19 @@
         <entry key="..\:/Users/user/AndroidStudioProjects/EWallet/app/src/main/res/drawable/ic_rectangle.xml" value="0.25092592592592594" />
         <entry key="..\:/Users/user/AndroidStudioProjects/EWallet/app/src/main/res/drawable/ic_settings.xml" value="0.2574074074074074" />
         <entry key="..\:/Users/user/AndroidStudioProjects/EWallet/app/src/main/res/drawable/ic_wallet.xml" value="0.2574074074074074" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/EWallet/app/src/main/res/layout-v23/fragment_dashboard.xml" value="0.35520833333333335" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/EWallet/app/src/main/res/layout-v23/fragment_dashboard.xml" value="0.17232375979112272" />
         <entry key="..\:/Users/user/AndroidStudioProjects/EWallet/app/src/main/res/layout-v23/fragment_home.xml" value="0.35520833333333335" />
         <entry key="..\:/Users/user/AndroidStudioProjects/EWallet/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/user/AndroidStudioProjects/EWallet/app/src/main/res/layout/activity_splash.xml" value="0.33" />
         <entry key="..\:/Users/user/AndroidStudioProjects/EWallet/app/src/main/res/layout/fragment_add.xml" value="0.33" />
         <entry key="..\:/Users/user/AndroidStudioProjects/EWallet/app/src/main/res/layout/fragment_converter.xml" value="0.33" />
         <entry key="..\:/Users/user/AndroidStudioProjects/EWallet/app/src/main/res/layout/fragment_currencies_list.xml" value="0.2791666666666667" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/EWallet/app/src/main/res/layout/fragment_dashboard.xml" value="0.33" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/EWallet/app/src/main/res/layout/fragment_dashboard.xml" value="0.165" />
         <entry key="..\:/Users/user/AndroidStudioProjects/EWallet/app/src/main/res/layout/fragment_home.xml" value="0.5" />
         <entry key="..\:/Users/user/AndroidStudioProjects/EWallet/app/src/main/res/layout/fragment_settings.xml" value="0.2791666666666667" />
         <entry key="..\:/Users/user/AndroidStudioProjects/EWallet/app/src/main/res/layout/fragment_splash.xml" value="0.2074074074074074" />
         <entry key="..\:/Users/user/AndroidStudioProjects/EWallet/app/src/main/res/layout/fragment_stats.xml" value="0.2791666666666667" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/EWallet/app/src/main/res/layout/fragment_wallet.xml" value="0.5" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/EWallet/app/src/main/res/layout/fragment_wallet.xml" value="0.33" />
         <entry key="..\:/Users/user/AndroidStudioProjects/EWallet/app/src/main/res/layout/item_transaction.xml" value="0.9" />
         <entry key="..\:/Users/user/AndroidStudioProjects/EWallet/app/src/main/res/layout/item_transactions.xml" value="0.35520833333333335" />
         <entry key="..\:/Users/user/AndroidStudioProjects/EWallet/app/src/main/res/layout/layout_autocomplete.xml" value="0.35" />
