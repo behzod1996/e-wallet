@@ -11,6 +11,7 @@ class FetchAllTransactionsInteractorImpl @Inject constructor(
     private val transactionRepository: TransactionRepository,
     private val dispatcher: DispatcherProvider
 ) : FetchAllTransactionsInteractor {
+
     override fun invoke(): Flow<List<TransactionModel>> {
         return transactionRepository.getAllTransactions().flowOn(dispatcher.io)
     }
