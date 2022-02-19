@@ -13,6 +13,7 @@
         />
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_save"
         android:layout_width="match_parent"
         android:layout_height="65dp"
         android:text="@string/text_add_expense_income"
