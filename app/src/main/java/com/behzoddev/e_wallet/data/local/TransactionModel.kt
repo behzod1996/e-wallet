@@ -18,6 +18,8 @@ data class TransactionModel(
     var transactionDate: String,
     @ColumnInfo(name = RoomContract.Transaction.TRANSACTION_DESC)
     var transactionDesc: String,
+    @ColumnInfo(name = RoomContract.Transaction.TRANSACTION_PAYMENT_METHOD)
+    var transactionPaymentMethod: String,
     @ColumnInfo(name = RoomContract.Transaction.TRANSACTION_CREATE_DATE)
     var transactionCreateDate: Long = System.currentTimeMillis(),
     @ColumnInfo(name = RoomContract.Transaction.TRANSACTION_ID)
