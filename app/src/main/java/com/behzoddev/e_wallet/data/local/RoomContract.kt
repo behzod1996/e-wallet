@@ -13,6 +13,7 @@ object RoomContract {
         const val TRANSACTION_TAG = "transaction_tag"
         const val TRANSACTION_DATE = "transaction_date"
         const val TRANSACTION_DESC = "transaction_desc"
+        const val TRANSACTION_PAYMENT_METHOD = "transaction_payment_method"
         const val TRANSACTION_CREATE_DATE = "transaction_create_date"
         const val TRANSACTION_ID = "transaction_id"
     }
