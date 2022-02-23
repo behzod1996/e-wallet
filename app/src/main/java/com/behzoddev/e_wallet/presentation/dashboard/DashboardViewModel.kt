@@ -1,4 +1,4 @@
-package com.behzoddev.e_wallet.presentation
+package com.behzoddev.e_wallet.presentation.dashboard
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
