@@ -15,6 +15,7 @@ import com.behzoddev.e_wallet.common.extensions.toastShort
 import com.behzoddev.e_wallet.data.local.TransactionModel
 import com.behzoddev.e_wallet.databinding.FragmentAddBinding
 import com.behzoddev.e_wallet.presentation.add.AddViewModel
+import com.behzoddev.e_wallet.utils.constants.TransactionPaymentMethod
 import com.behzoddev.e_wallet.utils.constants.TransactionTags
 import com.behzoddev.e_wallet.utils.constants.TransactionType
 import dagger.hilt.android.AndroidEntryPoint
@@ -37,6 +38,7 @@ class AddFragment : BaseFragment<FragmentAddBinding>() {
         initializeTag()
         initializeType()
         initializeDatePicker()
+        initializePaymentMethod()
         insertTransaction()
     }
 
@@ -77,6 +79,15 @@ class AddFragment : BaseFragment<FragmentAddBinding>() {
         )
     }
 
+    private fun initializePaymentMethod() = with(binding) {
+        val paymentMethod = ArrayAdapter(
+            requireContext(),
+            R.layout.layout_autocomplete,
+            TransactionPaymentMethod.paymentMethods
+        )
+        layoutAdd.actPaymentMethod.setAdapter(paymentMethod)
+    }
+
     private fun fetchTransactions(): TransactionModel = binding.layoutAdd.let {
         val transactionTitle = it.tieTitle.text.toString()
         val transactionAmount = it.tieAmount.text.toString()
@@ -84,6 +95,7 @@ class AddFragment : BaseFragment<FragmentAddBinding>() {
         val transactionTag = it.actTag.text.toString()
         val transactionDate = it.tieDate.text.toString()
         val transactionDesc = it.tieDesc.text.toString()
+        val transactionPaymentMethod = it.actPaymentMethod.text.toString()
 
         return@fetchTransactions TransactionModel(
             transactionTitle,
@@ -91,7 +103,8 @@ class AddFragment : BaseFragment<FragmentAddBinding>() {
             transactionType,
             transactionTag,
             transactionDate,
-            transactionDesc
+            transactionDesc,
+            transactionPaymentMethod
         )
     }
 }

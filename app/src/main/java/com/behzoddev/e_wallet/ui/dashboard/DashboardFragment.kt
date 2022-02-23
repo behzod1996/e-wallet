@@ -16,7 +16,7 @@ import com.behzoddev.e_wallet.common.extensions.convertToString
 import com.behzoddev.e_wallet.common.extensions.debug
 import com.behzoddev.e_wallet.data.local.TransactionModel
 import com.behzoddev.e_wallet.databinding.FragmentDashboardBinding
-import com.behzoddev.e_wallet.presentation.DashboardViewModel
+import com.behzoddev.e_wallet.presentation.dashboard.DashboardViewModel
 import com.behzoddev.e_wallet.ui.wallet.WalletAdapter
 import com.behzoddev.e_wallet.utils.states.TransactionViewState
 import dagger.hilt.android.AndroidEntryPoint
