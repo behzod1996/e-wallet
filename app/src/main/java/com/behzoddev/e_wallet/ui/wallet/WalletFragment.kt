@@ -34,6 +34,7 @@ class WalletFragment : BaseFragment<FragmentWalletBinding>() {
         super.onViewCreated(view, savedInstanceState)
         initializeRecyclerView()
         observerWallet()
+        onNavigateBack()
     }
 
     private fun initializeRecyclerView() = with(binding) {
